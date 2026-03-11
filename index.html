@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSL Arad | Viitorul este Liberal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0055A4; /* Albastru Liberal */
+            --accent: #FFD700;  /* Galben CSL */
+            --dark: #003366;
+            --light: #f4f7f6;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigație Modernă */
+        header {
+            background: rgba(0, 85, 164, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 10px 8%; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container pentru logouri aliniate la stânga */
+        .header-logos {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Spațiu între cele două logouri */
+        }
+
+        .logo-img {
+            height: 50px; 
+            width: auto;
+            display: block;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        nav a:hover { color: var(--accent); }
+
+        /* Hero Section cu Animație */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(0,51,102,0.9) 0%, rgba(0,85,164,0.7) 100%), 
+                        url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn-main {
+            background: var(--accent);
+            color: var(--dark);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: 0.4s;
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .btn-main:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(255, 215, 0, 0.4);
+            background: white;
+        }
+
+        /* Secțiuni */
+        section { padding: 100px 10%; }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--dark);
+        }
+
+        /* Cards cu Efect de Hover */
+        .grid-proiecte {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border-bottom: 5px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+        }
+
+        .card h3 { color: var(--primary); margin-bottom: 15px; }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 10% 20px;
+            text-align: center;
+        }
+
+        .social-links { margin-bottom: 20px; }
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-logos">
+            <a href="#acasa">
+                <img src="https://catanan.ro/wp-content/uploads/2018/11/logo-PNL-400x547.png" alt="Logo PNL" class="logo-img">
+            </a>
+            <img src="https://scontent.fomr1-1.fna.fbcdn.net/v/t39.30808-6/572813941_1229609408975074_173175928243493553_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=RMO_CNT4rh4Q7kNvwFyanNG&_nc_oc=AdkCaJTn-LC-01XRORyHmCbS0g5HHqdyGCoTCnJAtjx6BTsU6v0Fch_fol7rlz9UeLI&_nc_zt=23&_nc_ht=scontent.fomr1-1.fna&_nc_gid=14H4Xa47uazLIv_BDemClA&_nc_ss=8&oh=00_AfzZAP3LTu1HUOwzgTDfwXj7jvMYYFayY3ksjz-3QIcv4g&oe=69B7D16A" alt="Logo CSL" class="logo-img">
+        </div>
+        <nav>
+            <a href="#acasa">Acasă</a>
+            <a href="#viziune">Viziune</a>
+            <a href="#piloni">Piloni</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="acasa">
+        <div class="hero-content">
+            <h1>Îndrăznește să crezi în Arad.</h1>
+            <p>Organizația studențească a PNL Arad – locul unde ideile tale devin proiecte de lege.</p>
+            <br><br>
+            <a href="#contact" class="btn-main">Devino Membru</a>
+        </div>
+    </section>
+
+    <section id="viziune">
+        <h2 class="section-title">Valorile Noastre</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.1rem; color: #666;">Inspirându-ne din principiile liberalismului clasic, CSL Arad susține meritocrația în universități, antreprenoriatul în rândul tinerilor și o comunitate studențească activă și informată.</p>
+        </div>
+    </section>
+
+    <section id="piloni" style="background: #eef2f5;">
+        <h2 class="section-title">Ce facem noi?</h2>
+        <div class="grid-proiecte">
+            <div class="card">
+                <h3>Leadership</h3>
+                <p>Pregătim viitoarea generație de lideri prin traininguri de public speaking și administrație.</p>
+            </div>
+            <div class="card">
+                <h3>Networking</h3>
+                <p>Te punem la masa discuțiilor cu antreprenori, parlamentari și miniștri liberali.</p>
+            </div>
+            <div class="card">
+                <h3>Polici Publice</h3>
+                <p>Scriem proiecte care vizează transportul studenților, bursele și condițiile din campus.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="social-links">
+            <a href="#">FB</a> | <a href="#">IG</a> | <a href="#">TK</a>
+        </div>
+        <p><strong>Contact:</strong> Bulevardul Revoluției Nr. 78, Arad</p>
+        <p>Email: arad@csl.ro</p>
+        <br>
+        <p style="opacity: 0.5; font-size: 0.8rem;">&copy; 2026 CSL Arad. Creat pentru noua generație liberală.</p>
+    </footer>
+
+</body>
+</html>
