@@ -144,6 +144,77 @@
 
         .card h3 { color: var(--primary); margin-bottom: 15px; }
 
+        /* Stiluri Formular */
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .checkbox-item input {
+            width: auto;
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: var(--dark);
+            transform: translateY(-2px);
+        }
+
         /* Footer */
         footer {
             background: var(--dark);
@@ -193,7 +264,7 @@
             <h1>Îndrăznește să crezi în Arad.</h1>
             <p>Organizația studențească a PNL Arad – locul unde ideile tale devin proiecte de lege.</p>
             <br><br>
-            <a href="#contact" class="btn-main">Devino Membru</a>
+            <a href="#formular" class="btn-main">Devino Membru</a>
         </div>
     </section>
 
@@ -219,6 +290,54 @@
                 <h3>Polici Publice</h3>
                 <p>Scriem proiecte care vizează transportul studenților, bursele și condițiile din campus.</p>
             </div>
+        </div>
+    </section>
+
+    <section id="formular">
+        <h2 class="section-title">Înscrie-te în CSL Arad</h2>
+        <div class="form-container">
+            <form action="#">
+                <div class="form-group">
+                    <label for="nume">Nume</label>
+                    <input type="text" id="nume" name="nume" required>
+                </div>
+                <div class="form-group">
+                    <label for="prenume">Prenume</label>
+                    <input type="text" id="prenume" name="prenume" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresă de email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="facultate">La ce facultate studiezi?</label>
+                    <input type="text" id="facultate" name="facultate" required>
+                </div>
+                <div class="form-group">
+                    <label for="descriere">Te poți descrie în câteva cuvinte (Neobligatoriu)</label>
+                    <textarea id="descriere" name="descriere"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="telefon">Număr de telefon</label>
+                    <input type="tel" id="telefon" name="telefon" required>
+                </div>
+                <div class="form-group">
+                    <label for="info-pnl">Ce informații deții despre Partidul Național Liberal? (Neobligatoriu)</label>
+                    <textarea id="info-pnl" name="info-pnl"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Dorești să participi la acțiunile și evenimentele noastre?</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="radio" name="participare" value="DA" required> DA
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="radio" name="participare" value="NU"> NU
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit">Trimite Înscrierea</button>
+            </form>
         </div>
     </section>
 
