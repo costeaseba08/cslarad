@@ -58,9 +58,9 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 30px;
+            margin-left: 20px;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: 0.3s;
             text-transform: uppercase;
             position: relative;
@@ -152,6 +152,18 @@
             color: var(--dark);
         }
 
+        /* Stil Coming Soon */
+        .coming-soon-box {
+            padding: 40px;
+            text-align: center;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            color: #888;
+            font-style: italic;
+            font-size: 1.2rem;
+            background: #fdfdfd;
+        }
+
         /* Reorganizare grile */
         .grid-atribuții, .grid-proiecte {
             display: grid;
@@ -175,7 +187,7 @@
             border-left-color: var(--accent);
         }
 
-        /* Formular Style integrat ca articol */
+        /* Formular Style */
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--dark); }
         .form-group input, .form-group textarea {
@@ -200,6 +212,17 @@
             box-shadow: 0 6px 20px rgba(0, 85, 164, 0.4);
         }
 
+        /* Listă Contact */
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+        .contact-list strong {
+            color: var(--primary);
+        }
+
         /* Footer */
         footer { background: var(--dark); color: white; padding: 50px 10% 20px; text-align: center; }
         .social-links { margin-bottom: 20px; }
@@ -212,7 +235,6 @@
         }
         .social-links a:hover { color: var(--accent); }
 
-        /* KEYFRAMES PENTRU ANIMAȚII */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -223,8 +245,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2rem; }
+        @media (max-width: 900px) {
             nav { display: none; }
         }
     </style>
@@ -239,17 +260,18 @@
             <img src="https://scontent.fomr1-1.fna.fbcdn.net/v/t39.30808-6/572813941_1229609408975074_173175928243493553_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=RMO_CNT4rh4Q7kNvwFyanNG&_nc_oc=AdkCaJTn-LC-01XRORyHmCbS0g5HHqdyGCoTCnJAtjx6BTsU6v0Fch_fol7rlz9UeLI&_nc_zt=23&_nc_ht=scontent.fomr1-1.fna&_nc_gid=14H4Xa47uazLIv_BDemClA&_nc_ss=8&oh=00_AfzZAP3LTu1HUOwzgTDfwXj7jvMYYFayY3ksjz-3QIcv4g&oe=69B7D16A" alt="Logo CSL" class="logo-img">
         </div>
         <nav>
-            <a href="#acasa">Blog</a>
-            <a href="#viziune">Cine suntem</a>
-            <a href="#atribuții">Misiune</a>
-            <a href="#piloni">Proiecte</a>
+            <a href="#viziune">Poveste</a>
+            <a href="#board">Board</a>
+            <a href="#activitati">Activități</a>
+            <a href="#piloni">Oportunități</a>
             <a href="#formular">Înscriere</a>
+            <a href="#contact-info">Contact</a>
         </nav>
     </header>
 
     <section class="hero" id="acasa">
         <div class="hero-content">
-            <h1>Indrazneste sa crezi in vocea ta.</h1>
+            <h1>Îndrăznește să crezi în vocea ta.</h1>
             <p>Știri, idei și acțiuni ale tinerilor liberali din Arad.</p>
         </div>
     </section>
@@ -263,6 +285,22 @@
                 Clubul Studențesc Liberal (CSL) Arad este mai mult decât o organizație politică – este locul unde găsești prieteni care gândesc ca tine. 
                 Dacă crezi că <strong>libertatea ta și ideile tale</strong> contează, ai ajuns unde trebuie. Suntem vocea ta în fața universităților și a orașului, pregătiți să transformăm spiritul studențesc arădean în ceva memorabil.
             </p>
+        </article>
+
+        <article id="board">
+            <span class="post-meta">Echipa Noastră</span>
+            <h2 class="section-title">Meet the Board</h2>
+            <div class="coming-soon-box">
+                COOMING SOON
+            </div>
+        </article>
+
+        <article id="activitati">
+            <span class="post-meta">Calendar</span>
+            <h2 class="section-title">Proiecte și Activități</h2>
+            <div class="coming-soon-box">
+                COOMING SOON
+            </div>
         </article>
 
         <article id="atribuții">
@@ -358,15 +396,22 @@
             </form>
         </article>
 
+        <article id="contact-info">
+            <span class="post-meta">Hai să vorbim</span>
+            <h2 class="section-title">Contact</h2>
+            <ul class="contact-list">
+                <li><strong>Telefon:</strong> - </li>
+                <li><strong>Email:</strong> - </li>
+                <li><strong>Adresa:</strong> - </li>
+                <li><strong>Facebook:</strong> - </li>
+                <li><strong>Instagram:</strong> - </li>
+                <li><strong>TikTok:</strong> - </li>
+            </ul>
+        </article>
+
     </div>
 
     <footer id="contact">
-        <div class="social-links">
-            <a href="#">FB</a> | <a href="#">IG</a> | <a href="#">TK</a>
-        </div>
-        <p><strong>Contact:</strong> Bulevardul Revoluției Nr. 78, Arad</p>
-        <p>Email: arad@csl.ro</p>
-        <br>
         <p style="opacity: 0.5; font-size: 0.8rem;">&copy; 2026 CSL Arad. Blog creat pentru noua generație.</p>
     </footer>
 
